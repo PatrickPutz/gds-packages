@@ -1,8 +1,8 @@
 package org.campus02.putz.stack;
 
-public class Stack {
+public class Stack<T> {
 
-    private int[] array;
+    private T[] array;
     private int counter;
     /*
     private -> nur innerhalb der Klasse
@@ -10,12 +10,12 @@ public class Stack {
     nichts  -> package protected -> innerhalb des packages public, außerhalb des packages private
      */
 
-    public Stack(int[] array){
+    public Stack(T[] array){
         this.array = array;
         counter = 0;
     }
 
-    public void push(int value){
+    public void push(T value){
         if(counter >= array.length){
             System.out.println("Stack is full.");
             return;
@@ -26,9 +26,9 @@ public class Stack {
         }
     }
 
-    public int pop(){
+    public T pop(){
         if(counter == 0){
-            return -1;
+            return null;
         }
         else{
             counter--;
