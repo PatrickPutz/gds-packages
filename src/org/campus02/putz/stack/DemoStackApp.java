@@ -3,7 +3,7 @@ package org.campus02.putz.stack;
 public class DemoStackApp {
     public static void main(String[] args) {
 
-        Stack stapel = new Stack(new int[7]);
+        Stack stapel = new Stack(new Integer[7]);
 
         stapel.push(7);
         stapel.push(5);
